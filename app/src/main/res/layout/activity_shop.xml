@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvShopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Textil-Webshop"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgProduct1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/tvProductName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Póló"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ár: 5000 Ft"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vásárlás" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgProduct2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/tvProductName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pulóver"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ár: 8000 Ft"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vásárlás" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgProduct3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/tvProductName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sapka"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ár: 3000 Ft"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vásárlás" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

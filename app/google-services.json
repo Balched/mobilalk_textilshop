@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "708294920244",
+    "project_id": "textilwebshop-46e09",
+    "storage_bucket": "textilwebshop-46e09.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708294920244:android:a3c75ad458fef19e706261",
+        "android_client_info": {
+          "package_name": "com.example.textil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708294920244-5al6r0mkvtkpoob5u4mdjd4eenttfaud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.textil",
+            "certificate_hash": "ef46e1a10bb9c955597c921839635cd3cc6e491e"
+          }
+        },
+        {
+          "client_id": "708294920244-dabso5qjj415cajsstctoft0sb3v1um0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAasPiSwjbhshyO7JxLlkfWzDtllgjA2J4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708294920244-dabso5qjj415cajsstctoft0sb3v1um0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

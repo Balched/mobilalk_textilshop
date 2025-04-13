@@ -1,1 +1,0 @@
-# mobilalk_textilshop
