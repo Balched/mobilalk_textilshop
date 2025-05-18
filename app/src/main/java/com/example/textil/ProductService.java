@@ -1,14 +1,9 @@
 package com.example.textil;
 
 import android.util.Log;
-import androidx.annotation.NonNull;
-
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class ProductService {
     private FirebaseFirestore db;
@@ -60,5 +55,28 @@ public class ProductService {
                 .addOnFailureListener(e -> {
                     Log.e("ProductService", "Error deleting product", e);
                 });
+    }
+
+    public void getProductsByPriceFiltered(double minPrice, int limit, OnCompleteListener<QuerySnapshot> listener) {
+        productsRef.whereGreaterThan("price", minPrice)
+                .orderBy("price", Query.Direction.ASCENDING)
+                .limit(limit)
+                .get()
+                .addOnCompleteListener(listener);
+    }
+
+    public void getProductsOrderedByNameAndPrice(OnCompleteListener<QuerySnapshot> listener) {
+        productsRef.orderBy("name")
+                .orderBy("price", Query.Direction.DESCENDING)
+                .get()
+                .addOnCompleteListener(listener);
+    }
+
+    public void getPaginatedProducts(DocumentSnapshot startAfterDoc, int limit, OnCompleteListener<QuerySnapshot> listener) {
+        Query query = productsRef.orderBy("name").limit(limit);
+        if (startAfterDoc != null) {
+            query = query.startAfter(startAfterDoc);
+        }
+        query.get().addOnCompleteListener(listener);
     }
 }

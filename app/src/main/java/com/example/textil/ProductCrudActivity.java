@@ -1,13 +1,13 @@
 package com.example.textil;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.*;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.*;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -39,6 +39,12 @@ public class ProductCrudActivity extends AppCompatActivity {
         deleteButton = findViewById(R.id.deleteButton);
         productList = findViewById(R.id.productListView);
 
+        Button btnBackToShop = findViewById(R.id.btnBackToShop);
+        btnBackToShop.setOnClickListener(v -> finish());
+
+        Animation zoomIn = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
+        btnBackToShop.startAnimation(zoomIn);
+
         productService = new ProductService();
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>());
@@ -56,7 +62,6 @@ public class ProductCrudActivity extends AppCompatActivity {
             }
 
             double price = Double.parseDouble(priceStr);
-            //Product p = new Product(name, price);
 
             FirebaseFirestore db = FirebaseFirestore.getInstance();
             CollectionReference productsRef = db.collection("products");
