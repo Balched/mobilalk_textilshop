@@ -1,12 +1,14 @@
 package com.example.textil;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class ShopActivity extends AppCompatActivity {
 
@@ -27,6 +29,13 @@ public class ShopActivity extends AppCompatActivity {
                 Toast.makeText(ShopActivity.this, "Termék kosárba téve!", Toast.LENGTH_SHORT).show();
             }
         };
+
+        Button goToCrudButton = findViewById(R.id.goToCrudButton);
+
+        goToCrudButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ShopActivity.this, ProductCrudActivity.class);
+            startActivity(intent);
+        });
 
         buyButton1.setOnClickListener(listener);
         buyButton2.setOnClickListener(listener);
